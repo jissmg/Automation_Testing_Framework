@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM  " https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+<listener class-name="com.saucedemo.Listeners.CustomListener" />
+<listener class-name="com.saucedemo.Listeners.TransformerForRetry" />
+<listener class-name="com.saucedemo.Listeners.ExtentReportListener"/>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="com.saucedemo.Tests.LoginTest" />
+			<class name="com.saucedemo.Tests.ProductTest" />
+			<class name="com.saucedemo.Tests.CartTest" />
+			<class name="com.saucedemo.Tests.CheckoutTest" />
+            
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
